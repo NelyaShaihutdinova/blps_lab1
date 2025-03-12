@@ -1,0 +1,31 @@
+INSERT INTO products (name, image_url, old_price, discounted_price)
+VALUES
+    ('Laptop', 'http://example.com/images/laptop.jpg', 1000.00, 800.00),
+    ('Smartphone', 'http://example.com/images/smartphone.jpg', 500.00, 450.00),
+    ('Headphones', 'http://example.com/images/headphones.jpg', 150.00, 120.00),
+    ('Smartwatch', 'http://example.com/images/smartwatch.jpg', 200.00, 180.00),
+    ('Tablet', 'http://example.com/images/tablet.jpg', 350.00, 300.00);
+
+INSERT INTO store (address)
+VALUES
+    ('123 Main St, City A'),
+    ('456 Elm St, City B'),
+    ('789 Oak St, City C');
+
+INSERT INTO store_product (store_id, product_id) VALUES
+    (1, 1),
+    (2, 1);
+
+INSERT INTO store_product (store_id, product_id) VALUES
+    (1, 2),
+    (3, 2);
+
+INSERT INTO store_product (store_id, product_id) VALUES
+    (2, 3);
+
+INSERT INTO store_product (store_id, product_id) VALUES
+    (1, 4);
+
+INSERT INTO store_product (store_id, product_id) VALUES
+    (2, 5),
+    (3, 5);
