@@ -3,8 +3,6 @@ package org.example.blps_lab1.dto.request;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
-
 @Setter
 @Getter
 public class ContractRequest {
@@ -15,7 +13,5 @@ public class ContractRequest {
     private String passportDetails;
     private String email;
     private String phone;
-    private List<Long> productsId;
-    private Long storeId;
-    private Long userId;
+    private Long orderId;
 }

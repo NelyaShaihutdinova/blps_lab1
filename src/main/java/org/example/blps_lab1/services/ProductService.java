@@ -4,6 +4,7 @@ import org.example.blps_lab1.models.Product;
 import org.example.blps_lab1.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service

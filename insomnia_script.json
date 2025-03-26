@@ -1,0 +1,113 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-03-12T15:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2024.1.0",
+  "resources": [
+    {
+      "_id": "wrk_test_api",
+      "_type": "workspace",
+      "name": "Test API"
+    },
+    {
+      "_id": "req_get_products",
+      "_type": "request",
+      "parentId": "wrk_test_api",
+      "modified": 1710237800000,
+      "created": 1710237800000,
+      "url": "http://localhost:8080/products",
+      "name": "Get list of products",
+      "method": "GET"
+    },
+    {
+      "_id": "req_get_cart",
+      "_type": "request",
+      "parentId": "wrk_test_api",
+      "modified": 1710237800000,
+      "created": 1710237800000,
+      "url": "http://localhost:8080/cart/1",
+      "name": "Get products in user cart",
+      "method": "GET"
+    },
+    {
+      "_id": "req_add_to_cart",
+      "_type": "request",
+      "parentId": "wrk_test_api",
+      "modified": 1710237800000,
+      "created": 1710237800000,
+      "url": "http://localhost:8080/cart?userId=1&productId=1",
+      "name": "Add product to Cart",
+      "method": "POST"
+    },
+    {
+      "_id": "req_delete_cart",
+      "_type": "request",
+      "parentId": "wrk_test_api",
+      "modified": 1710237800000,
+      "created": 1710237800000,
+      "url": "http://localhost:8080/cart?userId=1&productId=1",
+      "name": "Delete product from Cart",
+      "method": "DELETE"
+    },
+    {
+      "_id": "req_save_order",
+      "_type": "request",
+      "parentId": "wrk_test_api",
+      "modified": 1710237800000,
+      "created": 1710237800000,
+      "url": "http://localhost:8080/order/save",
+      "name": "Save order and clear cart",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{ \"status\": \"ISSUED\", \"productsId\": [1,2], \"storeId\": 1, \"userId\": 1}"
+      }
+    },
+    {
+      "_id": "req_get_bank_solution",
+      "_type": "request",
+      "parentId": "wrk_test_api",
+      "modified": 1710237800000,
+      "created": 1710237800000,
+      "url": "http://localhost:8080/credit",
+      "name": "Fetch a banks' solution",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{ \"loanAmount\": 500000, \"term\": 36, \"downPayment\": 100000, \"monthlyPayment\": 12000, \"passportDetails\": \"AB1234567\", \"email\": \"example@example.com\", \"phone\": \"+7 900 123 45 67\"}"
+      }
+    },
+    {
+      "_id": "req_save_contract",
+      "_type": "request",
+      "parentId": "wrk_test_api",
+      "modified": 1710237800000,
+      "created": 1710237800000,
+      "url": "http://localhost:8080/credit/save",
+      "name": "Save contract",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{ \"loanAmount\": 100000, \"term\": 24, \"downPayment\": 20000, \"monthlyPayment\": 4000, \"passportDetails\": \"AB1234567\", \"email\": \"example@example.com\", \"phone\": \"+7 900 123 45 67\", \"productsId\": [1,2], \"storeId\": 1, \"userId\": 1, \"orderId\": 1}"
+      }
+    }
+  ]
+}

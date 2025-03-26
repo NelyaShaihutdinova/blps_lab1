@@ -6,26 +6,21 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Getter
 @Setter
+@Getter
 @Entity
-public class Contract {
+@Table(name = "orders")
+public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Double loanAmount;
-    private Integer term;
-    private Double downPayment;
-    private Double monthlyPayment;
-    private String passportDetails;
-    private String email;
-    private String phone;
+    private Status status;
 
     @ManyToMany
     @JoinTable(
-            name = "contract_product",
-            joinColumns = @JoinColumn(name = "contract_id"),
+            name = "order_product",
+            joinColumns = @JoinColumn(name = "order_id"),
             inverseJoinColumns = @JoinColumn(name = "product_id"))
     private List<Product> products;
 

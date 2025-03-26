@@ -14,12 +14,8 @@ public class CreditService {
         CreditResponse response = new CreditResponse();
         boolean isApproved = random.nextBoolean();
         response.setApproved(isApproved);
-
         if (isApproved) {
-            response.setOffers(Arrays.asList(
-                    "Кредит на 3 года с 8% годовых",
-                    "Кредит на 5 лет с 10% годовых"
-            ));
+            response.setOffers(Arrays.asList("Кредит на 3 года с 8% годовых", "Кредит на 5 лет с 10% годовых"));
         } else {
             response.setRejectionReason("Низкий кредитный рейтинг");
         }

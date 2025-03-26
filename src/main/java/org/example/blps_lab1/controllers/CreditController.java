@@ -3,8 +3,7 @@ package org.example.blps_lab1.controllers;
 import org.example.blps_lab1.dto.request.ContractRequest;
 import org.example.blps_lab1.dto.request.CreditRequest;
 import org.example.blps_lab1.dto.response.CreditResponse;
-import org.example.blps_lab1.models.Contract;
-import org.example.blps_lab1.services.ContractService;
+import org.example.blps_lab1.services.CreditContractService;
 import org.example.blps_lab1.services.CreditService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +19,7 @@ public class CreditController {
     private CreditService creditService;
 
     @Autowired
-    private ContractService contractService;
+    private CreditContractService contractService;
 
     @PostMapping
     public ResponseEntity<CreditResponse> applyForCredit(@RequestBody CreditRequest creditRequest) {
